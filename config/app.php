@@ -215,7 +215,12 @@ return [
         'providers' => [
             'core' => ANDS\Registry\Providers\RIFCS\CoreProvider::class,
             'identifier' => ANDS\Registry\Providers\RIFCS\IdentifierProvider::class,
-            'title' => ANDS\Registry\Providers\RIFCS\TitleProvider::class
+            'title' => ANDS\Registry\Providers\RIFCS\TitleProvider::class,
+            'relationship' => ANDS\Registry\Providers\RIFCS\RelationshipProvider::class,
+            'quality' => ANDS\Registry\Providers\RIFCS\QualityProvider::class,
+            'subject' => ANDS\Registry\Providers\RIFCS\SubjectProvider::class,
+            'temporal' => ANDS\Registry\Providers\RIFCS\TemporalProvider::class,
+            'spatial' => ANDS\Registry\Providers\RIFCS\TemporalProvider::class
         ]
     ]
 

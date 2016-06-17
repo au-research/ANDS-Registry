@@ -7,10 +7,9 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class RIFCSCoreProviderTest extends TestCase
 {
 
-
     /**
      * @test
-     * @cover
+     * @cover CoreProvider
      */
     public function it_should_be_able_to_get_key()
     {
@@ -26,7 +25,7 @@ class RIFCSCoreProviderTest extends TestCase
         $this->assertArrayHasKey('group', $content);
         $this->assertArrayHasKey('class', $content);
         $this->assertArrayHasKey('originating_source', $content);
-        $this->assertEquals($content['key'], "AUTCollection1");
+        $this->assertEquals($content['class'], "collection");
     }
 
 }

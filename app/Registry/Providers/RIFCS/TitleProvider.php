@@ -3,7 +3,7 @@
 namespace ANDS\Registry\Providers\RIFCS;
 use ANDS\Registry\Providers\RIFCSProvider;
 use ANDS\Registry\Record\Version;
-use SoapBox\Formatter\Formatter;
+
 
 class TitleProvider implements RIFCSProvider
 {
@@ -24,9 +24,6 @@ class TitleProvider implements RIFCSProvider
     public static function getRaw(Version $version)
     {
         $class = $version->getCoreAttribute('class');
-        // $formatter = Formatter::make($version->getContent('xml'), Formatter::XML);
-        // $content = $formatter->toArray();
-        // $rawNames = $content['registryObject'][$class]['name'];
 
         $sxml = simplexml_load_string($version->getContent('xml'));
         $sxml->registerXPathNamespace("ro", \Config::get('app.rifcs.namespace'));
