@@ -22,14 +22,14 @@ class RIFCSIdentifierProviderTest extends TestCase
         $this->assertContains(
             [
                 'value' => 'nla.AUTCollection1',
-                'attrs' => ['type' => 'AU-ANL:PEAU']
+                '@attributes' => ['type' => 'AU-ANL:PEAU']
             ],
             $content
         );
         $this->assertContains(
             [
                 'value' => 'nla.part.12345 ',
-                'attrs' => ['type' => 'AU-ANL:PEAU']
+                '@attributes' => ['type' => 'AU-ANL:PEAU']
             ],
             $content
         );

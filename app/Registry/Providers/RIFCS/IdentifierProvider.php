@@ -32,7 +32,7 @@ class IdentifierProvider implements RIFCSProvider
             if((string)$identifier != '') {
                 $identifier = [
                     'value' => (string) $identifier,
-                    'attrs' => [
+                    '@attributes' => [
                         'type' => (string) $identifier['type']
                     ]
                 ];

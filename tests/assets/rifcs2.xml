@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registryObjects xmlns="http://ands.org.au/standards/rif-cs/registryObjects" xmlns:extRif="http://ands.org.au/standards/rif-cs/extendedRegistryObjects" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ands.org.au/standards/rif-cs/registryObjects http://services.ands.org.au/documentation/rifcs/schema/registryObjects.xsd">
+<registryObject group="AUTestingRecords">
+    <key>AUTestingRecordsnhmrc.gov.au/person/DW0007881</key>
+    <originatingSource type="">nhmrc.gov.au</originatingSource>
+    <party type="person">
+      <name type="primary">
+        <namePart type="title">A/Pr</namePart>
+        <namePart type="family">Hime</namePart>
+        <namePart type="given">Gary</namePart>
+        <namePart type="given">R</namePart>
+      </name>
+      <identifier type="AU-ANL:PEAU">nla.Gary.R2343</identifier>
+      <relatedObject>
+        <key>AUTestingRecordsRelationshipsCollection3</key>
+        <relation type="isOwnerOf"/>
+      </relatedObject>
+    </party>
+  </registryObject>
+</registryObjects>
