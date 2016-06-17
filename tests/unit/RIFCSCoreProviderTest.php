@@ -6,7 +6,6 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class RIFCSCoreProviderTest extends TestCase
 {
-
     /**
      * @test
      * @cover CoreProvider
@@ -27,5 +26,4 @@ class RIFCSCoreProviderTest extends TestCase
         $this->assertArrayHasKey('originating_source', $content);
         $this->assertEquals($content['class'], "collection");
     }
-
 }

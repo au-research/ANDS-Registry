@@ -2,7 +2,6 @@
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-
 use ANDS\Registry\Providers\RIFCS\TitleProvider;
 
 class RIFCSTitleProviderTest extends TestCase

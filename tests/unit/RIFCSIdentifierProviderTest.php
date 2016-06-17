@@ -5,7 +5,6 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class RIFCSIdentifierProviderTest extends TestCase
 {
-
     /**
      * @test
      * @cover
@@ -34,5 +33,4 @@ class RIFCSIdentifierProviderTest extends TestCase
             $content
         );
     }
-
 }
