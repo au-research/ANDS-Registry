@@ -4,14 +4,14 @@ namespace ANDS\Registry\Providers\RIFCS;
 use ANDS\Registry\Providers\RIFCSProvider;
 use ANDS\Registry\Record\Version;
 
-class SubjectProvider implements RIFCSProvider
+class DescriptionProvider implements RIFCSProvider
 {
     /**
-     * Get the resolved subjects
+     * Get the resolved descriptions
      *
      * @todo implement
      * @param  Version $version
-     * @return array processed subjects
+     * @return array processed descriptions
      */
     public static function get(Version $version)
     {
@@ -19,7 +19,7 @@ class SubjectProvider implements RIFCSProvider
     }
 
     /**
-     * Get the raw unresolved subjects
+     * Get the raw unmodified descriptions
      *
      * @todo implement
      * @param  Version $version
@@ -30,32 +30,32 @@ class SubjectProvider implements RIFCSProvider
         $class = $version->getCoreAttribute('class');
         $sxml = simplexml_load_string($version->getContent('xml'));
         $sxml->registerXPathNamespace("ro", \Config::get('app.rifcs.namespace'));
-        $subjectXPath = $sxml->xpath('//ro:registryObject/ro:'.$class.'/ro:subject');
-        $subjects = array();
-        foreach($subjectXPath as $subject) {
-            if((string)$subject != '') {
-                $subject = [
-                    'value' => (string) $subject,
+        $descriptionXPath = $sxml->xpath('//ro:registryObject/ro:'.$class.'/ro:description');
+        $descriptions = array();
+        foreach($descriptionXPath as $description) {
+            if((string)$description != '') {
+                $description = [
+                    'value' => (string) $description,
                     '@attributes' => [
-                        'type' => (string) $subject['type']
+                        'type' => (string) $description['type']
                     ]
                 ];
-                $subjects[] = $subject;
+                $descriptions[] = $description;
             }
         }
 
-        return $subjects;
+        return $descriptions;
     }
 
     /**
-     * Process the subjects
+     * Process the descriptions
      *
      * @todo implement
      * @param  Version $version
      * @return array
      */
-    private static function process($subjects)
+    private static function process($descriptions)
     {
-       return $subjects;
+       return $descriptions;
     }
 }

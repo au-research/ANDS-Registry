@@ -6,6 +6,8 @@ use ANDS\Registry\Record\Version;
 
 class TemporalProvider implements RIFCSProvider
 {
+    // @note this should cover dates and coverage/temporal
+
     /**
      * Get the processed temporal values
      *

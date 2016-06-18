@@ -4,43 +4,41 @@ namespace ANDS\Registry\Providers\RIFCS;
 use ANDS\Registry\Providers\RIFCSProvider;
 use ANDS\Registry\Record\Version;
 
-class SpatialProvider implements RIFCSProvider
+class RightsProvider implements RIFCSProvider
 {
-    // @note this should cover location/spatial, coverage/spatial
-
     /**
-     * Get the processed spatial values
+     * Get the resolved rightss
      *
      * @todo implement
      * @param  Version $version
-     * @return array processed spatial
+     * @return array processed rightss
      */
-    public function get(Version $version)
+    public static function get(Version $version)
     {
         return self::process(self::getRaw());
     }
 
     /**
-     * Get the raw spatial values
+     * Get the raw unmodified rightss
      *
      * @todo implement
      * @param  Version $version
      * @return array
      */
-    public function getRaw(Version $version)
+    public static function getRaw(Version $version)
     {
         return [];
     }
 
     /**
-     * Process the spatial values
+     * Process the rightss
      *
      * @todo implement
      * @param  Version $version
      * @return array
      */
-    private function process($spatial)
+    private static function process($rightss)
     {
-       return $spatial;
+       return $rightss;
     }
 }

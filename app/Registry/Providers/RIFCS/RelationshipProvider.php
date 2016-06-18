@@ -6,6 +6,8 @@ use ANDS\Registry\Record\Version;
 
 class RelationshipProvider implements RIFCSProvider
 {
+    // @note this should cover relatedObjects and relatedInfo
+
     /*
      * @todo RelationshipRepository
      * @todo RelationshipInterface

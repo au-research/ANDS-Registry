@@ -4,43 +4,43 @@ namespace ANDS\Registry\Providers\RIFCS;
 use ANDS\Registry\Providers\RIFCSProvider;
 use ANDS\Registry\Record\Version;
 
-class SpatialProvider implements RIFCSProvider
+class CitationProvider implements RIFCSProvider
 {
-    // @note this should cover location/spatial, coverage/spatial
+    //@note this should cover citationInfo
 
     /**
-     * Get the processed spatial values
+     * Get the resolved citations
      *
      * @todo implement
      * @param  Version $version
-     * @return array processed spatial
+     * @return array processed citations
      */
-    public function get(Version $version)
+    public static function get(Version $version)
     {
         return self::process(self::getRaw());
     }
 
     /**
-     * Get the raw spatial values
+     * Get the raw unmodified citations
      *
      * @todo implement
      * @param  Version $version
      * @return array
      */
-    public function getRaw(Version $version)
+    public static function getRaw(Version $version)
     {
         return [];
     }
 
     /**
-     * Process the spatial values
+     * Process the citations
      *
      * @todo implement
      * @param  Version $version
      * @return array
      */
-    private function process($spatial)
+    private static function process($citations)
     {
-       return $spatial;
+       return $citations;
     }
 }

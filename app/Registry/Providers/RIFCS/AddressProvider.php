@@ -4,16 +4,16 @@ namespace ANDS\Registry\Providers\RIFCS;
 use ANDS\Registry\Providers\RIFCSProvider;
 use ANDS\Registry\Record\Version;
 
-class SpatialProvider implements RIFCSProvider
+class AddressProvider implements RIFCSProvider
 {
-    // @note this should cover location/spatial, coverage/spatial
+    //@note this should cover location/address
 
     /**
-     * Get the processed spatial values
+     * Get the processed address values
      *
      * @todo implement
      * @param  Version $version
-     * @return array processed spatial
+     * @return array processed address
      */
     public function get(Version $version)
     {
@@ -21,7 +21,7 @@ class SpatialProvider implements RIFCSProvider
     }
 
     /**
-     * Get the raw spatial values
+     * Get the raw address values
      *
      * @todo implement
      * @param  Version $version
@@ -33,14 +33,14 @@ class SpatialProvider implements RIFCSProvider
     }
 
     /**
-     * Process the spatial values
+     * Process the address values
      *
      * @todo implement
      * @param  Version $version
      * @return array
      */
-    private function process($spatial)
+    private function process($address)
     {
-       return $spatial;
+       return $address;
     }
 }
