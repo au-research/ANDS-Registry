@@ -11,14 +11,22 @@
 |
 */
 
-
 Route::get('/', function () {
   return Response::view('welcome');
 });
 
+Route::get('test3', 'ImportController@import');
+
+Route::group(['prefix'=>'api'], function() {
+
+    // Data Source Resource
+    Route::model('ds', ANDS\Registry\DataSource::class);
+    Route::resource('ds', 'DataSourceController');
+
+});
+
 Route::get('/test2', function() {
     $ds = ANDS\Registry\DataSource::find(208);
-    return $ds->records;
     return $ds;
 });
 

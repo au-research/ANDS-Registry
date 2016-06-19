@@ -53,6 +53,11 @@ return [
             'root' => base_path('tests/assets')
         ],
 
+        'harvested_contents' => [
+            'driver' => 'local',
+            'root' => env('HARVESTED_CONTENTS_PATH', '/var/www/harvested_contents')
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

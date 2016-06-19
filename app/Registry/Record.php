@@ -13,8 +13,9 @@ class Record extends Model
     public $timestamps = false;
 
 
-    public function dataSource()
+    public function recordable()
     {
-        return DataSource::find($this->data_source_id);
+        return $this->morphTo();
     }
+
 }
