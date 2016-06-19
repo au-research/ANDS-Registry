@@ -49,7 +49,9 @@ class DataSourceController extends Controller
      */
     public function show(DataSource $dataSource)
     {
-        $dataSource->published = $dataSource->published();
+        $dataSource->load('records');
+        $dataSource->recordCount = $dataSource->records->count();
+        $dataSource->count = $dataSource->count();
         return $dataSource;
     }
 
